@@ -4,16 +4,15 @@ body {
   width: 100vw;
   height: 100vh;
 
+  margin: 0;
+
+  display: flex;
+
   justify-content: center;
 
   flex-wrap: wrap;
 
-  display: flex;
-
   align-items: center;
-
-  margin-top: 22px;
-  margin-left: 15px;
 
   font-size: 15px;
   background-color: hsl(0, 0%, 95%);
@@ -25,10 +24,13 @@ body {
   width: 918px;
   height: 500px;
 
+  margin: 40px 0 0;
+
   border-radius: 8px;
   overflow: hidden;
 
   display: flex;
+  flex-direction: row;
 }
 /*orange space*/
 
@@ -73,19 +75,26 @@ body {
   line-height: 1.6;
   color: hsla(0, 0%, 100%, 0.75);
   margin-top: -7px;
-  line-height: 1.6;
   padding-right: 48px;
   padding-left: 48px;
 }
 
 .button {
   font-family: "Lexend Deca", sans-serif;
-  background-color: hsl(0, 0%, 95%);
+
   border: 2px solid hsl(0, 0%, 95%);
-  text-align: center;
-  border-radius: 30px;
-  margin: 85px 110px 40px 49px;
+  background-color: hsl(0, 0%, 95%);
+
   padding: 14px 3px 10px 0px;
+  margin: 85px 110px 40px 49px;
+
+  width: 137px;
+  height: 26px;
+
+  text-align: center;
+
+  border-radius: 30px;
+
   transition: all 0.4s ease-in-out;
 }
 
@@ -103,55 +112,72 @@ body {
 
 .btn1 {
   color: hsl(31, 77%, 52%);
+
   text-decoration: none;
 }
 
 .btn2 {
   color: hsl(184, 100%, 22%);
+
   text-decoration: none;
 }
 
 .btn3 {
   color: hsl(179, 100%, 13%);
+
   text-decoration: none;
 }
 
 @media screen and (max-width: 920px) {
+  body {
+    margin: 0;
+
+    flex-wrap: nowrap;
+  }
+
   .container {
     width: 918px;
-    height: 100vh;
-    margin-top: 65px;
-    margin-left: 10px;
-    margin-right: 39px;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+    height: auto;
+
+    margin: 10px 0px 7px;
+
     display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    overflow: visible;
   }
 
   .box1 {
-    height: 442px;
-    width: 336px;
+    width: 325px;
+    height: 439px;
+
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
 
   .box2 {
-    height: 442px;
-    width: 336px;
+    width: 325px;
+    height: 439px;
   }
 
   .box3 {
-    height: 442px;
-    width: 336px;
+    width: 325px;
+    height: 439px;
+
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
   }
 
   .button {
     padding: 12px 4px 14px 3px;
-    margin: 30px 142px 0px 48px;
+
+    margin: 30px 142px 4px 48px;
+
+    width: 137px;
+
     text-align: center;
   }
   .btn3 {
