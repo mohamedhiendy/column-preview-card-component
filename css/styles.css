@@ -129,12 +129,6 @@ body {
 }
 
 @media screen and (max-width: 920px) {
-  body {
-    margin: 0;
-
-    flex-wrap: nowrap;
-  }
-
   .container {
     width: 918px;
     height: auto;
