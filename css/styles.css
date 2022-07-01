@@ -133,7 +133,7 @@ body {
     width: 918px;
     height: auto;
 
-    margin: 10px 0px 7px;
+    margin: 30px 0 20px;
 
     display: flex;
 
@@ -171,6 +171,7 @@ body {
     margin: 30px 142px 4px 48px;
 
     width: 137px;
+    height: 22px;
 
     text-align: center;
   }
