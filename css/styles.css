@@ -43,8 +43,16 @@ body .component .learn-more button {
   width: 100%;
   background-color: hsla(0, 0%, 100%, 0.75);
   height: 100%;
-  border: none;
+  transition: all 0.4s;
+  border: solid 2px hsla(0, 0%, 100%, 0.75);
   border-radius: 30px;
+  cursor: pointer;
+}
+body .component .learn-more button:hover {
+  background-color: transparent;
+  color: hsla(0, 0%, 100%, 0.75);
+  border: solid 2px hsla(0, 0%, 100%, 0.75);
+  transition: all 0.4s;
 }
 body .sedan {
   background-color: hsl(31, 77%, 52%);
