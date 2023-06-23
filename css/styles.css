@@ -1,1 +1,68 @@
-/*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(0, 0%, 100%, 0.75);
+  height: 100vh;
+  font-family: "Big Shoulders Display", cursive;
+}
+body .component {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 30px;
+  width: 20.5%;
+  height: 30rem;
+  padding-left: 45px;
+  padding-top: 45px;
+  padding-right: 60px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+body .component .header h1 {
+  font-size: 40px;
+}
+body .component .description p {
+  font-size: 14px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 100;
+  line-height: 24px;
+}
+body .component .learn-more {
+  width: 70%;
+  height: 45px;
+  position: relative;
+  bottom: -10px;
+}
+body .component .learn-more button {
+  width: 100%;
+  background-color: hsla(0, 0%, 100%, 0.75);
+  height: 100%;
+  border: none;
+  border-radius: 30px;
+}
+body .sedan {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 8px 0 0 8px;
+}
+body .sedan .learn-more button {
+  color: hsl(31, 77%, 52%);
+}
+body .suv {
+  background-color: hsl(184, 100%, 22%);
+}
+body .suv .learn-more button {
+  color: hsl(184, 100%, 22%);
+}
+body .luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 8px 8px 0;
+}
+body .luxury .learn-more button {
+  color: hsl(179, 100%, 13%);
+}/*# sourceMappingURL=styles.css.map */

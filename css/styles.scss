@@ -1,0 +1,111 @@
+// Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+// Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$Very-light-gray: hsl(0, 0%, 95%);
+
+$fontno1: "Lexend Deca", sans-serif;
+$fontno2: "Big Shoulders Display", cursive;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $transparent-white;
+
+  height: 100vh;
+
+  font-family: $fontno2;
+
+  .component {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 30px;
+
+    width: 20.5%;
+    height: 30rem;
+
+    padding-left: 45px;
+    padding-top: 45px;
+    padding-right: 60px;
+
+    color: $transparent-white;
+
+    .header {
+      h1 {
+        font-size: 40px;
+      }
+    }
+
+    .description {
+      p {
+        font-size: 14px;
+        font-family: $fontno1;
+        font-weight: 100;
+        line-height: 24px;
+      }
+    }
+
+    .learn-more {
+      width: 70%;
+      height: 45px;
+
+      position: relative;
+      bottom: -10px;
+
+      button {
+        width: 100%;
+        background-color: $transparent-white;
+        height: 100%;
+
+        border: none;
+
+        border-radius: 30px;
+      }
+    }
+  }
+
+  .sedan {
+    background-color: $bright-orange;
+    border-radius: 8px 0 0 8px;
+
+    .learn-more {
+      button {
+        color: $bright-orange;
+      }
+    }
+  }
+
+  .suv {
+    background-color: $dark-cyan;
+
+    .learn-more {
+      button {
+        color: $dark-cyan;
+      }
+    }
+  }
+
+  .luxury {
+    background-color: $very-dark-cyan;
+    border-radius: 0 8px 8px 0;
+
+    .learn-more {
+      button {
+        color: $very-dark-cyan;
+      }
+    }
+  }
+}
