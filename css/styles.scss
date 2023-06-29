@@ -1,6 +1,3 @@
-// Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
-// Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
-
 $bright-orange: hsl(31, 77%, 52%);
 $dark-cyan: hsl(184, 100%, 22%);
 $very-dark-cyan: hsl(179, 100%, 13%);
@@ -22,80 +19,100 @@ body {
   align-items: center;
   justify-content: center;
 
-  background-color: $transparent-white;
-
-  height: 100vh;
+  min-height: 100vh;
 
   font-family: $fontno2;
+
+  background-color: $transparent-white;
+}
+
+.container {
+  display: flex;
+
+  width: 52rem;
+  height: 28rem;
+
+  overflow: hidden;
+
+  margin-left: 20px;
+  margin-right: 20px;
 
   .component {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    gap: 30px;
+    justify-content: space-between;
 
-    width: 20.5%;
-    height: 30rem;
-
-    padding-left: 45px;
     padding-top: 45px;
-    padding-right: 60px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    padding-left: 43px;
 
     color: $transparent-white;
 
+    .header-photo {
+      width: 3.5rem;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     .header {
+      margin-top: -35px;
+
       h1 {
-        font-size: 40px;
+        font-size: 2.3rem;
+        font-family: $fontno2;
       }
     }
 
     .description {
+      margin-top: -40px;
+
       p {
-        font-size: 14px;
         font-family: $fontno1;
+        line-height: 1.4rem;
+
+        font-size: 14px;
         font-weight: 100;
-        line-height: 24px;
       }
     }
 
     .learn-more {
-      width: 70%;
-      height: 45px;
-
-      position: relative;
-      bottom: -10px;
+      width: 8.1rem;
+      height: 2.6rem;
 
       button {
         width: 100%;
-        background-color: $transparent-white;
         height: 100%;
 
-        transition: all 0.4s;
-
         border: solid 2px $transparent-white;
-
         border-radius: 30px;
+
+        background-color: $transparent-white;
 
         cursor: pointer;
       }
 
       button:hover {
-        background-color: transparent;
         color: $transparent-white;
-
-        border: solid 2px $transparent-white;
-        transition: all 0.4s;
+        background-color: transparent;
+        transform: all 0.5s;
       }
     }
   }
 
   .sedan {
     background-color: $bright-orange;
-    border-radius: 8px 0 0 8px;
+
+    border-radius: 6px 0 0 6px;
 
     .learn-more {
       button {
         color: $bright-orange;
+        transition: all 0.5s;
       }
     }
   }
@@ -106,17 +123,53 @@ body {
     .learn-more {
       button {
         color: $dark-cyan;
+        transition: all 0.5s;
       }
     }
   }
 
   .luxury {
     background-color: $very-dark-cyan;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 6px 6px 0;
 
     .learn-more {
       button {
         color: $very-dark-cyan;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .container {
+    height: auto;
+
+    flex-direction: column;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .sedan {
+      border-radius: 6px 6px 0 0;
+    }
+
+    .luxury {
+      border-radius: 0 0 6px 6px;
+    }
+
+    .component {
+      justify-content: none;
+
+      .header {
+        margin-top: 20px;
+        margin-bottom: 60px;
+      }
+
+      .description {
+        margin-top: none;
+
+        margin-bottom: 30px;
       }
     }
   }

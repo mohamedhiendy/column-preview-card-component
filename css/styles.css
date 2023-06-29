@@ -8,69 +8,116 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsla(0, 0%, 100%, 0.75);
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Big Shoulders Display", cursive;
+  background-color: hsla(0, 0%, 100%, 0.75);
 }
-body .component {
+
+.container {
+  display: flex;
+  width: 52rem;
+  height: 28rem;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.container .component {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  gap: 30px;
-  width: 20.5%;
-  height: 30rem;
-  padding-left: 45px;
+  justify-content: space-between;
   padding-top: 45px;
-  padding-right: 60px;
+  padding-right: 15px;
+  padding-bottom: 40px;
+  padding-left: 43px;
   color: hsla(0, 0%, 100%, 0.75);
 }
-body .component .header h1 {
-  font-size: 40px;
+.container .component .header-photo {
+  width: 3.5rem;
+  height: auto;
 }
-body .component .description p {
-  font-size: 14px;
-  font-family: "Lexend Deca", sans-serif;
-  font-weight: 100;
-  line-height: 24px;
-}
-body .component .learn-more {
-  width: 70%;
-  height: 45px;
-  position: relative;
-  bottom: -10px;
-}
-body .component .learn-more button {
+.container .component .header-photo img {
   width: 100%;
-  background-color: hsla(0, 0%, 100%, 0.75);
   height: 100%;
-  transition: all 0.4s;
+}
+.container .component .header {
+  margin-top: -35px;
+}
+.container .component .header h1 {
+  font-size: 2.3rem;
+  font-family: "Big Shoulders Display", cursive;
+}
+.container .component .description {
+  margin-top: -40px;
+}
+.container .component .description p {
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.4rem;
+  font-size: 14px;
+  font-weight: 100;
+}
+.container .component .learn-more {
+  width: 8.1rem;
+  height: 2.6rem;
+}
+.container .component .learn-more button {
+  width: 100%;
+  height: 100%;
   border: solid 2px hsla(0, 0%, 100%, 0.75);
   border-radius: 30px;
+  background-color: hsla(0, 0%, 100%, 0.75);
   cursor: pointer;
 }
-body .component .learn-more button:hover {
-  background-color: transparent;
+.container .component .learn-more button:hover {
   color: hsla(0, 0%, 100%, 0.75);
-  border: solid 2px hsla(0, 0%, 100%, 0.75);
-  transition: all 0.4s;
+  background-color: transparent;
+  transform: all 0.5s;
 }
-body .sedan {
+.container .sedan {
   background-color: hsl(31, 77%, 52%);
-  border-radius: 8px 0 0 8px;
+  border-radius: 6px 0 0 6px;
 }
-body .sedan .learn-more button {
+.container .sedan .learn-more button {
   color: hsl(31, 77%, 52%);
+  transition: all 0.5s;
 }
-body .suv {
+.container .suv {
   background-color: hsl(184, 100%, 22%);
 }
-body .suv .learn-more button {
+.container .suv .learn-more button {
   color: hsl(184, 100%, 22%);
+  transition: all 0.5s;
 }
-body .luxury {
+.container .luxury {
   background-color: hsl(179, 100%, 13%);
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 6px 6px 0;
 }
-body .luxury .learn-more button {
+.container .luxury .learn-more button {
   color: hsl(179, 100%, 13%);
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 660px) {
+  .container {
+    height: auto;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .container .sedan {
+    border-radius: 6px 6px 0 0;
+  }
+  .container .luxury {
+    border-radius: 0 0 6px 6px;
+  }
+  .container .component {
+    justify-content: none;
+  }
+  .container .component .header {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+  .container .component .description {
+    margin-top: none;
+    margin-bottom: 30px;
+  }
 }/*# sourceMappingURL=styles.css.map */
